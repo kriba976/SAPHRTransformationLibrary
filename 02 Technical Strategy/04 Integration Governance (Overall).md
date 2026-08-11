@@ -1,5 +1,5 @@
 # SAP Integration Governance Technical Reference
-## Development, BTP Infrastructure Management, Role based Access Control, Release Management, Operations and maintenance
+## Development fundamentals, BTP Infrastructure Management, Role based Access Control, Release Management, Operations and maintenance
 
 ---
 
@@ -45,7 +45,7 @@ debugInConsole: false # Print debug info in Obsidian console
 │  │  Structuring      │  │  Release Mgmt      │  │  Monitoring       │    │
 │  │                   │  │                    │  │                   │    │
 │  │  Terraform IaC    │  │  cTMS              │  │  SAP Cloud ALM    │    │
-│  │  Subaccount       │  │  GitHub / FlashPipe│  │  Alert Mgmt       │    │
+│  │  Subaccount       │  │  GitHub.           │  │  Alert Mgmt       │    │
 │  │  Topology         │  │  CI/CD Pipeline    │  │  Anomaly Detect.  │    │
 │  └───────────────────┘  └─────────────────── ┘  └───────────────────┘    │
 │                                                                          │
@@ -587,13 +587,12 @@ jobs:
 
 ### 4.5 Real-World Issues — DevOps & Release Management
 
-| Issue | Root Cause | Resolution |
-|---|---|---|
-| **cTMS import to PROD fails with "Content mismatch" error** | The iFlow was manually edited directly in the QA or PROD Integration Suite designer after the transport was created, causing a version mismatch | Enforce a policy: no direct designer edits in QA/PROD; all changes must come through cTMS transport from DEV |
-| **FlashPipe backup job fails silently — no new commits for days** | GitHub Actions scheduled jobs can become inactive if there is no repository activity for 60 days; or the CI DEV OAuth token has rotated | Set up a monitoring alert on the GitHub Actions workflow; rotate secrets proactively; add a "heartbeat" commit to keep the schedule active |
-| **cTMS transport queue accumulates unreleased requests** | Developers create transport requests but forget to forward them; no expiry mechanism | Establish a sprint-end cleanup ritual: all transport requests must be either forwarded or deleted before sprint close; Cloud ALM can be configured to alert on stale queues |
-| **Two developers transport the same package simultaneously, causing a conflict in QA** | cTMS does not prevent concurrent transports of the same package by different developers | Implement a "transport lock" process: developers announce in the Teams channel before transporting; cTMS import is sequential (last import wins) |
-| **FlashPipe creates a massive commit with hundreds of changed files when a Value Mapping table is refreshed** | Value Mapping exports include binary data that changes on every export even with no logical changes | Exclude Value Mapping artifacts from FlashPipe sync and manage them separately; or use `.gitattributes` to mark Value Mapping files as binary and suppress diff noise |
+| Issue                                                                                                         | Root Cause                                                                                                                                      | Resolution                                                                                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **cTMS import to PROD fails with "Content mismatch" error**                                                   | The iFlow was manually edited directly in the QA or PROD Integration Suite designer after the transport was created, causing a version mismatch | Enforce a policy: no direct designer edits in QA/PROD; all changes must come through cTMS transport from DEV                                                                |
+| **cTMS transport queue accumulates unreleased requests**                                                      | Developers create transport requests but forget to forward them; no expiry mechanism                                                            | Establish a sprint-end cleanup ritual: all transport requests must be either forwarded or deleted before sprint close; Cloud ALM can be configured to alert on stale queues |
+| **Two developers transport the same package simultaneously, causing a conflict in QA**                        | cTMS does not prevent concurrent transports of the same package by different developers                                                         | Implement a "transport lock" process: developers announce in the Teams channel before transporting; cTMS import is sequential (last import wins)                            |
+
 
 ---
 
