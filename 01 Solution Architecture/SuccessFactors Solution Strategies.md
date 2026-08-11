@@ -32,7 +32,7 @@ Talent hybrid, EC Read only, EC Core hybrid, **<font color="#ff0000">Full Cloud<
 - Start from the Customer’s strategy: How does the Roll-Out / deployment supports the business strategy? - Do you have a executive mandate to fully replace your existing legacy on-prem solutions, or do you have a lot of pain points and want to move to a more robust and integration talent solution, etc
 - What are some of the pain points and what should be solved first?
 
-![[Pasted image 20260712114935.png|697]]
+![](screenshots/20260712114935.png|697)
 
 ---
 # 2. **Roll out strategy**
@@ -40,10 +40,10 @@ Talent hybrid, EC Read only, EC Core hybrid, **<font color="#ff0000">Full Cloud<
 **Roll out Strategy** - Big Bang or <font color="#ff0000">Phased roll out</font>
 It is recommended for Employee Central included implementations to start with defining a Global Template first. This includes the minimum set of data to serve all global HR processes and reporting
 
-![[Pasted image 20260712112558.png|697]]
+![697](screenshots/Pasted%20image%2020260712112558.png)
 
 Phased Roll-Out - by Module
-	![[Pasted image 20260712112712.png|661]]
+	![661](screenshots/Pasted%20image%2020260712112712.png)
 
 
 
@@ -102,7 +102,7 @@ Production Instance
 	1 client for Prod
 
 
-![[Pasted image 20260713125747.png]]
+![](screenshots/Pasted%20image%2020260713125747.png)
 
 
 ### 3.3.3 Data Scrambling 
