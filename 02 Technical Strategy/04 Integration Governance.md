@@ -34,20 +34,24 @@ debugInConsole: false # Print debug info in Obsidian console
 
 ```
 ┌──────────────────────────────────────────────────────────────────────────┐
-│                SAP BTP Infrastructure Management Overview                 │
-│                                                                            │
-│  ┌───────────────────┐  ┌───────────────────┐  ┌───────────────────┐    │
+│                SAP BTP Infrastructure Management Overview                │
+│                                                                          │
+│  ┌───────────────────────────────────────────────────────────────────┐   │
+│  │  1. Development Fundamentals                                      │   │
+│  │  Package Structures, naming COnventions 7 Rate Limiting.          │   │
+│  └───────────────────────────────────────────────────────────────────┘   │
+│  ┌───────────────────┐  ┌─────────────────── ┐  ┌───────────────────┐    │
 │  │  1. BTP           │  │  2. DevOps &       │  │  3. Operations &  │    │
 │  │  Structuring      │  │  Release Mgmt      │  │  Monitoring       │    │
 │  │                   │  │                    │  │                   │    │
 │  │  Terraform IaC    │  │  cTMS              │  │  SAP Cloud ALM    │    │
 │  │  Subaccount       │  │  GitHub / FlashPipe│  │  Alert Mgmt       │    │
 │  │  Topology         │  │  CI/CD Pipeline    │  │  Anomaly Detect.  │    │
-│  └───────────────────┘  └───────────────────┘  └───────────────────┘    │
-│                                                                            │
+│  └───────────────────┘  └─────────────────── ┘  └───────────────────┘    │
+│                                                                          │
 │  ┌───────────────────────────────────────────────────────────────────┐   │
-│  │  4. Access Governance                                              │   │
-│  │  IAS as centralised IdP · ServiceNow ticketing · BTP RBAC        │   │
+│  │  4. Access Governance                                             │   │
+│  │  IAS as centralised IdP · ServiceNow ticketing · BTP RBAC         │   │
 │  └───────────────────────────────────────────────────────────────────┘   │
 └──────────────────────────────────────────────────────────────────────────┘
 ```
