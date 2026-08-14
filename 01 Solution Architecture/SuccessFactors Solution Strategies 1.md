@@ -42,7 +42,7 @@ Talent hybrid, EC Read only, EC Core hybrid, **<font color="#ff0000">Full Cloud<
 - Start from the Customer’s strategy: How does the Roll-Out / deployment supports the business strategy? - Do you have a executive mandate to fully replace your existing legacy on-prem solutions, or do you have a lot of pain points and want to move to a more robust and integration talent solution, etc
 - What are some of the pain points and what should be solved first?
 
-![697](../../01%20SAP%20HR%20Transformation%20Library/01%20Solution%20Architecture/screenshots/20260712114935.png)
+![](screenshots/20260712114935.png)
 
 ---
 # 3. **Roll out strategy**
@@ -54,10 +54,11 @@ https://d.dam.sap.com/a/WSqDZAu/IDP%20Employee%20Central%20Implementation%20Cons
 **Roll out Strategy** - Big Bang or <font color="#ff0000">Phased roll out</font>
 It is recommended for Employee Central included implementations to start with defining a Global Template first. This includes the minimum set of data to serve all global HR processes and reporting
 
-![697](20260712112558.png)
+![](screenshots/20260712112558.png)
 
 Phased Roll-Out - by Module
-	![661](20260712112712.png)
+
+![](screenshots/20260712112712.png)
 
 
 ---
@@ -75,7 +76,7 @@ Tenant - individual database schema (SF modules) with unique tenant ID
 
 For example, a Prod Instance may be comprised of HCM Core, LMS, and Recruiting Marketing tenants.
 
-![](20260714110422.png)
+![](screenshots/20260714110422.png)
 
 
 
@@ -107,7 +108,8 @@ For example, a Prod Instance may be comprised of HCM Core, LMS, and Recruiting M
 	- Customers with QA instance on preview could face twice a year a blackout period
 
 **Example** 
-![697](20260714111338.png)
+
+![](screenshots/20260714111338.png)
 
 ### 4.4.1 Employee Central Instance strategy
 -> possibly a GOLDEN CLIENT instance
@@ -129,7 +131,8 @@ For example, a Prod Instance may be comprised of HCM Core, LMS, and Recruiting M
 	1 client for Prod
 
 
-![](20260713125747.png)
+![](screenshots/20260713125747.png)
+
 
 ## 4.5 Data Scrambling 
 - Consideration for setting up production like permissions within the test environment
@@ -202,7 +205,7 @@ First mock conversion to be performed around iteration 3 by when the data model 
 
 Data quality metrics should be defined to measure completeness and accuracy of data migration.
 
-![](20260714101622.png)
+![](screenshots/20260714101622.png)
 **SuccessFactors Recruitment** 
 - RCM - Recruitment Management RCM serves as the core Applicant Tracking System (ATS). It manages the internal hiring process, data tracking, and compliance
 	- Requisition Mangement
